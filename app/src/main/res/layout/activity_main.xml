@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/imageViewFruit"
+        android:id="@+id/IVMyFruit"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="16dp"
@@ -16,15 +16,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/orange" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:srcCompat="@drawable/orange" />
 
     <Switch
         android:id="@+id/switchFruit"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_marginBottom="24dp"
-        android:text="@string/switch_grapes"
+        android:text="@string/startGame"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -33,10 +33,67 @@
         android:id="@+id/btnRandom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="@string/random_image"
+        android:text="@string/random"
+        app:icon="@drawable/ic_cake"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnApple"
+        app:layout_constraintTop_toTopOf="@+id/btnApple" />
+
+    <ImageView
+        android:id="@+id/IVRandom"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:srcCompat="@drawable/apple" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/randomImage"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/yourGuessImage"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/IVRandom" />
+
+    <Button
+        android:id="@+id/btnApple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/apple"
         app:icon="@drawable/ic_apple"
+        app:layout_constraintEnd_toStartOf="@+id/btnRandom"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnGrape"
+        app:layout_constraintTop_toTopOf="@+id/btnGrape" />
+
+    <Button
+        android:id="@+id/btnGrape"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/grape"
+        app:icon="@drawable/ic_grape"
         app:layout_constraintBottom_toTopOf="@+id/switchFruit"
-        app:layout_constraintEnd_toEndOf="@+id/switchFruit"
-        app:layout_constraintStart_toStartOf="@+id/switchFruit" />
+        app:layout_constraintEnd_toStartOf="@+id/btnApple"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

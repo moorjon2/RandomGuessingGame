@@ -3,4 +3,11 @@
     <string name="switch_grapes">Switch to grapes</string>
     <string name="switch_apple">Switch to apple</string>
     <string name="random_image">Show Random Image</string>
+    <string name="randomImage">Random Image</string>
+    <string name="yourGuessImage">Your Guess Image</string>
+    <string name="random">Random</string>
+    <string name="apple">Apple</string>
+    <string name="startGame">Start Game</string>
+    <string name="stopGame">Stop Game</string>
+    <string name="grape">Grape</string>
 </resources>
